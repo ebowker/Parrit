@@ -63,8 +63,11 @@ task jsBuild(type: Exec) {
 }
 processResources.dependsOn(jsBuild)
 processResources {
-    from ('build/resources/static') {
-        into 'static'
+    from ('build/resources/main/static/built') {
+        into 'built'
+    }
+    from ('build/resources/main/static/img') {
+        into 'img'
     }
 }
 
