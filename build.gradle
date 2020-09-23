@@ -62,6 +62,11 @@ task jsBuild(type: Exec) {
     args = ["--config", "webpack.config.js"]
 }
 processResources.dependsOn(jsBuild)
+processResources {
+    from ('build/resources/static') {
+        into 'static'
+    }
+}
 
 task jsDependencies(type: Exec) {
     group = "Parrit"
