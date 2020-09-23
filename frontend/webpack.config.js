@@ -10,7 +10,7 @@ module.exports = {
     },
     output: {
         filename: 'built/[name].js',
-        path: path.resolve(__dirname, '../build/resources/main/static')
+        path: path.resolve(__dirname, 'dist')
     },
     plugins: [
         new MiniCssExtractPlugin({filename: 'built/[name].css'})
